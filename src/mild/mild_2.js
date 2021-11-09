@@ -5,9 +5,9 @@
  * example: identifyVariable(4);
  * returns: { type: 'number', value: 4 }
  */
-export function identifyVariable(variable) {
-   var type = typeof(variable);
-   return { type, variable };
+export function identifyVariable(value) {
+   var type = typeof(value);
+   return { type, value };
 }
 
 
@@ -27,8 +27,8 @@ export function identifyVariable(variable) {
 export function identifyArray(array) {
    var results = [];
    return array.map(element => {
-      var type = typeof(element);
-       return { type, element };
+      var type = typeof(value);
+       return { type, value };
    });
 }
 
