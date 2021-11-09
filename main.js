@@ -1,6 +1,6 @@
 import { sumToString, getIncreasingArray, maxAndMin, countArray } from "./src/mild/mild_1.js";
 import { identifyVariable, identifyArray, removeKey, removeKeyNonDestructive, removeKeys} from "./src/mild/mild_2.js";
-import { getSum } from "./src/medium/medium_1.js";
+import { getMedian, getSum } from "./src/medium/medium_1.js";
 
 const testSumToString = () => {
     console.debug("2 + 2: " + sumToString(2,2))
@@ -71,13 +71,18 @@ const testGetSum = () => {
     console.log(getSum([1,2,3]));
 }
 
+const testGetMedian = () => {
+    console.log(getMedian([3,2,5,6,2,7,4,2,7,5//]));
+}
+
 //testSumToString()
 //testGetIncreasingArray()
 //testMaxAndMin()
 //testCountArray()
 //testIdentifyVariable()
-testIdentifyArray();
+//testIdentifyArray();
 //testRemoveKey();
 //testNonDestructiveRemoveKey();
 //testRemoveKeys()
 //testGetSum();
+//testGetMedian();
