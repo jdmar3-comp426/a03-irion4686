@@ -26,7 +26,7 @@ export function identifyVariable(value) {
  */
 export function identifyArray(array) {
    var results = [];
-   return array.map(element => {
+   return array.map(value => {
       var type = typeof(value);
        return { type, value };
    });

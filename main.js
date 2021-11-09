@@ -75,8 +75,8 @@ const testGetSum = () => {
 //testGetIncreasingArray()
 //testMaxAndMin()
 //testCountArray()
-testIdentifyVariable()
-//testIdentifyArray();
+//testIdentifyVariable()
+testIdentifyArray();
 //testRemoveKey();
 //testNonDestructiveRemoveKey();
 //testRemoveKeys()
