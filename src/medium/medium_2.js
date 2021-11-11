@@ -34,11 +34,12 @@ const returnAllYearStats = () => {
         acc[key].push(obj);
         return acc;
     }, {});
-    console.log(data);
+    return getStatistics(data);
+    //console.log(data);
 }
 export const allCarStats = {
     avgMpg: returnAvgMPG(),
-    allYearStats: returnAllYearStats(),
+    allYearStats: undefined, //returnAllYearStats(),
     ratioHybrids: undefined,
 };
 
