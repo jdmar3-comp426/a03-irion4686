@@ -39,7 +39,7 @@ const returnAllYearStats = () => {
 }
 export const allCarStats = {
     avgMpg: returnAvgMPG(),
-    allYearStats: undefined, //returnAllYearStats(),
+    allYearStats: getStatistics(mpg_data.map(car => car.year)),//undefined, //returnAllYearStats(),
     ratioHybrids: undefined,
 };
 
