@@ -19,11 +19,29 @@ see under the methods section
  *
  * @param {allCarStats.ratioHybrids} ratio of cars that are hybrids
  */
+ const returnAvgMPG = () => {
+    let city = mpg_data.map(car => car.city_mpg);
+    let highway = mpg_data.map(car => car.highway_mpg);
+    return { city: getStatistics(city).mean, highway: getStatistics(highway).mean }
+}
+
+const returnAllYearStats = () => {
+    let data = mpg_data.reduce((acc, obj) => {
+        let key = obj['year'];
+        if (!acc[key]) {
+            acc[key] = [];
+        }
+        acc[key].push(obj);
+        return acc;
+    }, {});
+    console.log(data);
+}
 export const allCarStats = {
-    avgMpg: undefined,
-    allYearStats: undefined,
+    avgMpg: returnAvgMPG(),
+    allYearStats: returnAllYearStats(),
     ratioHybrids: undefined,
 };
+
 
 
 /**
