@@ -83,6 +83,7 @@ const testGetStats = () => {
 const testCarStats = () => {
     console.log(allCarStats.avgMpg);
     console.log(allCarStats.allYearStats);
+    console.log(allCarStats.ratioHybrids);
 }
 
 //testSumToString()
