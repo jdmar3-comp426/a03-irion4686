@@ -27,7 +27,7 @@ export const repeat = (fn, n, ...params) => {
  * Use the repeat function to log the string "Hello, world!" to the console
  *   10 times.
  */
-const printStatement = (params) => {
+const printStatement = (...params) => {
     let statement = '';
     params.forEach(param => statement += param);
     return statement;
