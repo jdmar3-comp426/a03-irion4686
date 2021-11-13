@@ -2,7 +2,7 @@ import { sumToString, getIncreasingArray, maxAndMin, countArray } from "./src/mi
 import { identifyVariable, identifyArray, removeKey, removeKeyNonDestructive, removeKeys} from "./src/mild/mild_2.js";
 import { getMedian, getStatistics, getSum } from "./src/medium/medium_1.js";
 import { allCarStats, moreStats } from "./src/medium/medium_2.js";
-import { searchHighPower, searchMpg, searchName } from "./src/medium/medium_3.js";
+import { searchByYear, searchHighPower, searchMpg, searchName } from "./src/medium/medium_3.js";
 import mpg_data from "./src/medium/data/mpg_data.js";
 
 const testSumToString = () => {
@@ -105,6 +105,10 @@ const testSearchName = () => {
     console.log(searchName(mpg_data, '70'));
 }
 
+const testSearchYear = () => {
+    console.log(searchByYear(mpg_data, [2011,2010]));
+}
+
 //testSumToString()
 //testGetIncreasingArray()
 //testMaxAndMin()
@@ -121,4 +125,5 @@ const testSearchName = () => {
 //testMoreStats();
 //testSearchHorsePower();
 //testSearchMPG();
-testSearchName();
+//testSearchName();
+testSearchYear();
