@@ -101,8 +101,8 @@ export const tenTimesFifty = () => {
  *    everyEven([1, 1, 0, 1, 1], x => x === 1)  <--  returns false
  */
 export const everyEven = (arr, test) => {
-    for (let i = 2; i < arr.length; i += 2) {
-        if (arr[i] !== test) {
+    for (let i = 0; i < arr.length; i += 2) {
+        if (arr[i] != test) {
             return false;
         }
     }
@@ -131,7 +131,7 @@ export const everyEven = (arr, test) => {
  */
 export const someEven = (arr, test) => {
     for (let i = 2; i < arr.length; i += 2) {
-        if (arr[i] == test) {
+        if (arr[i] === test) {
             return true;
         }
     }
@@ -161,7 +161,12 @@ export const someEven = (arr, test) => {
  *       -->  { pass: [1, 5, 31], fail: [90] }
  */
 export const filter = (arr, test) => {
-
+    for (let i = 1; i < arr.length; i += 2) {
+        if (!test(arr[i])) {
+            return false;
+        }
+    }
+    return true;
 };
 
 

@@ -4,7 +4,7 @@ import { getMedian, getStatistics, getSum } from "./src/medium/medium_1.js";
 import { allCarStats, moreStats } from "./src/medium/medium_2.js";
 import { searchByYear, searchHighPower, searchMpg, searchName } from "./src/medium/medium_3.js";
 import mpg_data from "./src/medium/data/mpg_data.js";
-import { multiplyBy, repeatDemo, tenTimes, tenTimesFifty } from "./src/spicy/spicy_9.js";
+import { everyEven, multiplyBy, repeatDemo, tenTimes, tenTimesFifty } from "./src/spicy/spicy_9.js";
 
 const testSumToString = () => {
     console.debug("2 + 2: " + sumToString(2,2))
@@ -123,6 +123,10 @@ const testTimesTen = () => {
     console.log(tenTimesFifty());
 }
 
+const testEveryEvent = () => {
+    console.log(everyEven([1, 5, 1, 0, 1], 1));
+    console.log(everyEven([], 1));
+}
 //testSumToString()
 //testGetIncreasingArray()
 //testMaxAndMin()
@@ -143,4 +147,5 @@ const testTimesTen = () => {
 //testSearchYear();
 //demo();
 //testMultiplyBy();
-testTimesTen();
+//testTimesTen();
+testEveryEvent();
