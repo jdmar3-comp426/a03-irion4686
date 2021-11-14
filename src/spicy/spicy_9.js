@@ -102,7 +102,7 @@ export const tenTimesFifty = () => {
  */
 export const everyEven = (arr, test) => {
     for (let i = 2; i < arr.length; i += 2) {
-        if (arr[i] != test) {
+        if (arr[i] !== test) {
             return false;
         }
     }
