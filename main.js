@@ -4,7 +4,7 @@ import { getMedian, getStatistics, getSum } from "./src/medium/medium_1.js";
 import { allCarStats, moreStats } from "./src/medium/medium_2.js";
 import { searchByYear, searchHighPower, searchMpg, searchName } from "./src/medium/medium_3.js";
 import mpg_data from "./src/medium/data/mpg_data.js";
-import { repeatDemo } from "./src/spicy/spicy_9.js";
+import { multiplyBy, repeatDemo, tenTimes, tenTimesFifty } from "./src/spicy/spicy_9.js";
 
 const testSumToString = () => {
     console.debug("2 + 2: " + sumToString(2,2))
@@ -114,6 +114,15 @@ const demo = () => {
     repeatDemo();
 }
 
+const testMultiplyBy = () => {
+    console.log(multiplyBy(3));
+}
+
+const testTimesTen = () => {
+    console.log(tenTimes(10));
+    console.log(tenTimesFifty());
+}
+
 //testSumToString()
 //testGetIncreasingArray()
 //testMaxAndMin()
@@ -132,4 +141,6 @@ const demo = () => {
 //testSearchMPG();
 //testSearchName();
 //testSearchYear();
-demo();
+//demo();
+//testMultiplyBy();
+testTimesTen();
