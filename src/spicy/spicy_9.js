@@ -133,7 +133,7 @@ export const everyEven = (arr, test) => {
  */
 export const someEven = (arr, test) => {
     for (let i = 2; i < arr.length; i += 2) {
-        if (arr[i] === test) {
+        if (test(arr[i])) {
             return true;
         }
     }
@@ -204,6 +204,6 @@ export const anEvenIsOdd = (arr) => {
  */
 export const hasExactly = (arr, test, n) => {
     const results = filter(arr, test);
-    if (results[pass].length !== n) return false;
+    if (results['pass'].length !== n) return false;
     return true;
 };
