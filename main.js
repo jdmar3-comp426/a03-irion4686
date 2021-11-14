@@ -124,7 +124,7 @@ const testTimesTen = () => {
 }
 
 const testEveryEvent = () => {
-    console.log(everyEven([1, 5, 1, 0, 1], 1));
+    console.log(everyEven([1, 5, 1, 0, 1], x => x === 1));
     console.log(everyEven([], 1));
 }
 //testSumToString()
