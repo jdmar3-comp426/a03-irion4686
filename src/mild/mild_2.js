@@ -5,8 +5,9 @@
  * example: identifyVariable(4);
  * returns: { type: 'number', value: 4 }
  */
-export function identifyVariable(variable) {
-
+export function identifyVariable(value) {
+   var type = typeof(value);
+   return { type, value };
 }
 
 
@@ -24,7 +25,11 @@ export function identifyVariable(variable) {
 
  */
 export function identifyArray(array) {
-
+   var results = [];
+   return array.map(value => {
+      var type = typeof(value);
+       return { type, value };
+   });
 }
 
 /**
@@ -44,7 +49,8 @@ export function identifyArray(array) {
  obj now does not contain the `password` field
  */
 export function removeKey(object, key) {
-
+   delete object[key];
+   return object;
 }
 
 /**
@@ -64,7 +70,9 @@ export function removeKey(object, key) {
  If only `removeKeyNonDestructive` was called, nothing would have changed.
  */
 export function removeKeyNonDestructive(object, key) {
-
+   let obj = { ...object };
+   delete obj[key];
+   return obj;
 }
 
 /**
@@ -89,5 +97,9 @@ export function removeKeyNonDestructive(object, key) {
  * @return {*} The object with its keys removed.
  */
 export function removeKeys(object, keyList) {
-
+   let obj = { ...object }
+   keyList.forEach(element => {
+      delete obj[element];
+   });
+   return obj;
 }
